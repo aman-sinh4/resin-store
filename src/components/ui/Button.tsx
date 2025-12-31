@@ -14,7 +14,7 @@ interface ButtonCustomProps {
 
 // Combine with Framer Motion props
 // Omit ref from here as it is handled by forwardRef
-type ButtonProps = ButtonCustomProps & HTMLMotionProps<"button">;
+type ButtonProps = ButtonCustomProps & Omit<HTMLMotionProps<"button">, "children"> & { children?: React.ReactNode };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className = "", variant = "primary", size = "md", isLoading, children, disabled, ...props }, ref) => {
