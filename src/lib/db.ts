@@ -27,6 +27,8 @@ async function dbConnect() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
+      serverSelectionTimeoutMS: 5000, // Fail fast if connection cannot be established (e.g. IP whitelist)
+      socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
     };
 
     cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => {
