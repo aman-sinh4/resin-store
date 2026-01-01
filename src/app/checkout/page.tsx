@@ -77,7 +77,7 @@ export default function CheckoutPage() {
                     type="text"
                     name="name"
                     required
-                    className="mt-1 block w-full rounded-md border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border"
+                    className="mt-1 block w-full rounded-md border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
                     onChange={handleChange}
                   />
                 </div>
@@ -88,7 +88,7 @@ export default function CheckoutPage() {
                     type="email"
                     name="email"
                     required
-                    className="mt-1 block w-full rounded-md border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border"
+                    className="mt-1 block w-full rounded-md border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
                     onChange={handleChange}
                   />
                 </div>
@@ -99,7 +99,7 @@ export default function CheckoutPage() {
                     type="tel"
                     name="phone"
                     required
-                    className="mt-1 block w-full rounded-md border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border"
+                    className="mt-1 block w-full rounded-md border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
                     onChange={handleChange}
                   />
                 </div>
@@ -110,7 +110,7 @@ export default function CheckoutPage() {
                     type="text"
                     name="street"
                     required
-                    className="mt-1 block w-full rounded-md border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border"
+                    className="mt-1 block w-full rounded-md border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
                     onChange={handleChange}
                   />
                 </div>
@@ -121,7 +121,7 @@ export default function CheckoutPage() {
                     type="text"
                     name="city"
                     required
-                    className="mt-1 block w-full rounded-md border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border"
+                    className="mt-1 block w-full rounded-md border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
                     onChange={handleChange}
                   />
                 </div>
@@ -132,7 +132,7 @@ export default function CheckoutPage() {
                     type="text"
                     name="state"
                     required
-                    className="mt-1 block w-full rounded-md border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border"
+                    className="mt-1 block w-full rounded-md border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
                     onChange={handleChange}
                   />
                 </div>
@@ -143,7 +143,7 @@ export default function CheckoutPage() {
                     type="text"
                     name="zip"
                     required
-                    className="mt-1 block w-full rounded-md border-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border"
+                    className="mt-1 block w-full rounded-md border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white shadow-sm focus:border-black dark:focus:border-white focus:ring-black dark:focus:ring-white sm:text-sm h-10 px-3 border placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
                     onChange={handleChange}
                   />
                 </div>

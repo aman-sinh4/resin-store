@@ -34,7 +34,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4 py-12 sm:px-6 lg:px-8">
+    <div className="flex min-h-screen justify-center bg-neutral-50 px-4 py-12 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-neutral-900">
@@ -44,26 +44,26 @@ export default function AdminLogin() {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="-space-y-px rounded-md shadow-sm">
             <div>
-              <label htmlFor="email-address" className="sr-only">Email address</label>
+              <label htmlFor="email-address" className="block text-sm font-semibold text-neutral-900 mb-1">Email address</label>
               <input
                 id="email-address"
                 name="email"
                 type="email"
                 required
-                className="relative block w-full rounded-t-md border border-neutral-300 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:z-10 focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+                className="relative block w-full rounded-md border border-neutral-400 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:z-10 focus:border-black focus:outline-none focus:ring-black sm:text-sm mb-4"
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
-              <label htmlFor="password" className="sr-only">Password</label>
+              <label htmlFor="password" className="block text-sm font-semibold text-neutral-900 mb-1">Password</label>
               <input
                 id="password"
                 name="password"
                 type="password"
                 required
-                className="relative block w-full rounded-b-md border border-neutral-300 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:z-10 focus:border-black focus:outline-none focus:ring-black sm:text-sm"
+                className="relative block w-full rounded-md border border-neutral-400 px-3 py-2 text-neutral-900 placeholder-neutral-500 focus:z-10 focus:border-black focus:outline-none focus:ring-black sm:text-sm"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

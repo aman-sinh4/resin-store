@@ -57,41 +57,41 @@ export default function NewProductPage() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
           <div className="sm:col-span-4">
-            <label className="block text-sm font-medium text-gray-700">Title</label>
-            <input type="text" name="title" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-gray-300 py-2 px-3 focus:border-indigo-500 focus:ring-indigo-500" />
+            <label className="block text-sm font-semibold text-neutral-900">Title</label>
+            <input type="text" name="title" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-neutral-400 py-2 px-3 focus:border-black focus:ring-black text-neutral-900 placeholder-neutral-500" />
           </div>
 
           <div className="sm:col-span-6">
-            <label className="block text-sm font-medium text-gray-700">Description</label>
-            <textarea name="description" required rows={3} onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-gray-300 py-2 px-3 focus:border-indigo-500 focus:ring-indigo-500" />
+            <label className="block text-sm font-semibold text-neutral-900">Description</label>
+            <textarea name="description" required rows={3} onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-neutral-400 py-2 px-3 focus:border-black focus:ring-black text-neutral-900 placeholder-neutral-500" />
           </div>
 
           <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-gray-700">Price (₹)</label>
-            <input type="number" name="price" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-gray-300 py-2 px-3 focus:border-indigo-500 focus:ring-indigo-500" />
+            <label className="block text-sm font-semibold text-neutral-900">Price (₹)</label>
+            <input type="number" name="price" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-neutral-400 py-2 px-3 focus:border-black focus:ring-black text-neutral-900 placeholder-neutral-500" />
           </div>
 
           <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-gray-700">Stock</label>
-            <input type="number" name="stock" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-gray-300 py-2 px-3 focus:border-indigo-500 focus:ring-indigo-500" />
+            <label className="block text-sm font-semibold text-neutral-900">Stock</label>
+            <input type="number" name="stock" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-neutral-400 py-2 px-3 focus:border-black focus:ring-black text-neutral-900 placeholder-neutral-500" />
           </div>
 
            <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-gray-700">Category</label>
-            <input type="text" name="category" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-gray-300 py-2 px-3 focus:border-indigo-500 focus:ring-indigo-500" />
+            <label className="block text-sm font-semibold text-neutral-900">Category</label>
+            <input type="text" name="category" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-neutral-400 py-2 px-3 focus:border-black focus:ring-black text-neutral-900 placeholder-neutral-500" />
           </div>
 
            <div className="sm:col-span-3">
-            <label className="block text-sm font-medium text-gray-700">Type</label>
-            <select name="type" onChange={handleChange} className="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+            <label className="block text-sm font-semibold text-neutral-900">Type</label>
+            <select name="type" onChange={handleChange} className="mt-1 block w-full rounded-md border border-neutral-400 py-2 px-3 focus:border-black focus:outline-none focus:ring-black sm:text-sm text-neutral-900">
               <option value="raw_material">Raw Material</option>
               <option value="preservation_service">Preservation Service</option>
             </select>
           </div>
 
            <div className="sm:col-span-6">
-            <label className="block text-sm font-medium text-gray-700">Image URLs (comma separated)</label>
-            <input type="text" name="images" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-gray-300 py-2 px-3 focus:border-indigo-500 focus:ring-indigo-500" placeholder="https://example.com/image1.jpg, https://example.com/image2.jpg" />
+            <label className="block text-sm font-semibold text-neutral-900">Image URLs (comma separated)</label>
+            <input type="text" name="images" required onChange={handleChange} className="mt-1 block w-full rounded-md border text-sm border-neutral-400 py-2 px-3 focus:border-black focus:ring-black text-neutral-900 placeholder-neutral-500" placeholder="https://example.com/image1.jpg, https://example.com/image2.jpg" />
           </div>
 
         </div>
