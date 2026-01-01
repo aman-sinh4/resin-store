@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogOut } from 'lucide-react';
+
 
 export default function AdminLayout({
   children,
@@ -11,7 +12,23 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+
+  const handleLogout = async () => {
+    setIsLoggingOut(true);
+    try {
+      const res = await fetch('/api/auth/logout', { method: 'POST' });
+      if (res.ok) {
+        router.push('/admin/login');
+      }
+    } catch (error) {
+      console.error('Logout failed', error);
+    } finally {
+      setIsLoggingOut(false);
+    }
+  };
 
   const navigation = [
     { name: 'Dashboard', href: '/admin/dashboard' },
@@ -47,8 +64,16 @@ export default function AdminLayout({
                 ))}
               </div>
             </div>
-            <div className="flex items-center">
-               <span className="hidden md:block text-sm text-neutral-500 mr-4">admin@resinstore.com</span>
+            <div className="flex items-center gap-4">
+               <span className="hidden md:block text-sm text-neutral-500">admin@resinstore.com</span>
+               <button
+                  onClick={handleLogout}
+                  disabled={isLoggingOut}
+                  className="inline-flex items-center rounded-md border border-neutral-300 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700 shadow-sm hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 disabled:opacity-50"
+               >
+                  <LogOut className="mr-1.5 h-3.5 w-3.5" />
+                  Logout
+               </button>
                <div className="-mr-2 flex items-center sm:hidden">
                   <button
                     type="button"

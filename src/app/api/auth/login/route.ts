@@ -30,12 +30,12 @@ export async function POST(req: Request) {
 
         const response = NextResponse.json({ success: true, user: { email: user.email, name: user.name } });
 
-        // Set cookie
+        // Set cookie (1 day = 86400 seconds)
         response.cookies.set('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'strict',
-            maxAge: 86400, // 1 day
+            maxAge: 86400,
             path: '/',
         });
 

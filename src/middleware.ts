@@ -14,14 +14,23 @@ export async function middleware(request: NextRequest) {
 
     // Protect /admin routes
     if (path.startsWith('/admin')) {
-        // Exclude login page if it's under /admin/login (but we might put login elsewhere)
-        // If our login page is /admin/login, allow it.
+        const token = request.cookies.get('token')?.value;
+
+        // If on login page and has token, try to redirect to dashboard
         if (path === '/admin/login') {
+            if (token) {
+                try {
+                    await jwtVerify(token, JWT_SECRET);
+                    return NextResponse.redirect(new URL('/admin/dashboard', request.url));
+                } catch (err) {
+                    // Invalid token, stay on login page
+                    return NextResponse.next();
+                }
+            }
             return NextResponse.next();
         }
 
-        const token = request.cookies.get('token')?.value;
-
+        // For all other admin routes, require valid token
         if (!token) {
             return NextResponse.redirect(new URL('/admin/login', request.url));
         }
@@ -30,7 +39,6 @@ export async function middleware(request: NextRequest) {
             await jwtVerify(token, JWT_SECRET);
             return NextResponse.next();
         } catch (err) {
-            // Invalid token
             return NextResponse.redirect(new URL('/admin/login', request.url));
         }
     }
