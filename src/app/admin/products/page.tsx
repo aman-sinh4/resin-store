@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Plus, Edit2, Trash2, Search, Filter, Loader2, Package } from 'lucide-react';
 
 export default function AdminProducts() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');

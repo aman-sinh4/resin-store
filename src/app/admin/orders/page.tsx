@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { Search, Filter, Calendar, Loader2, Mail, Phone, ExternalLink, X, ShoppingBag, MapPin, CreditCard, ChevronRight, User } from 'lucide-react';
 
 export default function AdminOrders() {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState('all');
   const [monthFilter, setMonthFilter] = useState('all');
